@@ -1,0 +1,45 @@
+{
+    "name":"Responsive Theme - Skokov for contentbox-theme",
+    "version":"1.0",
+    "author":"Lucid Outsourcing Solutions",
+    "location":"https://github.com/LucidSolutions/cbskokov/archive/master.zip",
+    "homepage":"http://www.ortussolutions.com/products/contentbox",
+    "documentation":"https://github.com/LucidSolutions/cbskokov",
+    "repository":{
+        "type":"git",
+        "URL":"https://github.com/LucidSolutions/cbbusinessblog"
+    },
+    "bugs":"https://github.com/LucidSolutions/cbskokov/issues",
+    "slug":"cbskokov",
+    "shortDescription":"Responsive Theme - Skokov for contentbox-theme",
+    "description":"Responsive Theme - Skokov for contentbox-theme",
+    "instructions":"",
+    "changelog":"",
+    "type":"contentbox-themes",
+    "license":[
+        {
+            "type":"Apache2",
+            "URL":"http://www.apache.org/licenses/LICENSE-2.0"
+        }
+    ],
+    "contributors":[
+        
+    ],
+    "dependencies":{
+        
+    },
+    "devDependencies":{
+        
+    },
+    "installPaths":{
+        
+    },
+    "scripts":{
+        
+    },
+    "ignore":[
+        "**/.*",
+        "test",
+        "tests"
+    ]
+}
