@@ -59,12 +59,13 @@ component extends="contentbox.models.ui.BaseWidget" singleton{
 		// Check incoming query
 		local.q = htmlEditFormat( event.getValue( "q", "" ) );
 
-		// generate recent comments <input type="submit" value="">
+		// generate recent comments
 		saveContent variable="rString"{
 			writeOutput('
-			#html.startForm( name="searchForm", action=action, class=arguments.formcss )#
-					#html.textField( name="q", placeholder="Search", value=local.q, class="form-control")#
-			#html.endForm()#
+				<form name="searchForm">
+					<input type="text" placeholder="Search" name="q">
+					<input type="submit" value="">
+				</form>
 			');
 		}
 

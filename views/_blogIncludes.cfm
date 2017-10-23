@@ -24,8 +24,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href='http://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
-<link href="#cb.themeRoot()#/includes/css/elastislide.css" rel="stylesheet" type="text/css" media="all" />
-<link href="#cb.themeRoot()#/includes/css/magnific-popup.css" rel="stylesheet" type="text/css">
 
 <!--- ********************************************************************************* --->
 <!--- 					JAVASCRIPT														--->

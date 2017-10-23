@@ -267,7 +267,7 @@ p.bottom{
 	vertical-align: middle;
 }
 .display-inline-block .submit{
-	float: none;
+	/*float: none;*/
 	vertical-align: middle;
 	font-size: 20px;
     padding: 6px 15px;
@@ -934,6 +934,7 @@ p.copy a:hover{
 .banner{
 	background:url(../images/banner.jpg)no-repeat;
 	padding:50px 0;
+	background-size: cover;
 }
 .banner h2{
 	color: #FFEA00;
@@ -1149,7 +1150,7 @@ p.img{
 }
 .project-sidebar{
 	width: 25.5%;
-	float: left;
+	float: right;
 }
 .project-list{
 	background:#424147;
@@ -1337,11 +1338,11 @@ span.icon{
 .search_box form input[type="submit"] {
 	background: url('../images/search.png') no-repeat -3px 0px;
 	padding: 4px 14px;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    line-height: 1.5em;
-    outline: none;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	line-height: 1.5em;
+	outline: none;
 }
 ul.blog-list{
 	width:100%;
@@ -1435,13 +1436,8 @@ p.blog-text{
 	line-height: 1.8em;
 	padding: 30px 0;
 }
-div.blog-text{
-	color: #000;
-	font-size: 0.95em;
-	line-height: 1.8em;
-	padding: 30px 0;
-}
 .share-point{
+	padding-top: 25px;
 	border-bottom: 1px solid #DBDBDB;
 	margin-bottom:30px;
 	padding-bottom:30px;
@@ -1564,7 +1560,7 @@ li.last-comment{
 	font-size: 0.89em;
 	line-height: 1.5em;
 }
-.to input[type="text"], .to input[type="email"], .to input[type="url"], .to textarea {
+.to input[type="text"], .to input[type="email"]{
 	padding: 10px 10px;
 	width: 45%;
 	font-size: 1em;
@@ -1577,21 +1573,8 @@ li.last-comment{
 	outline: none;
 	font-size: 0.89em;
 }
-.text1 input[type="url"]{
-	padding: 10px 10px;
-    width:97.6%;
-    font-size: 1em;
-    font-family: "Century Gothic",Arial, Helvetica, sans-serif;
-    margin: 10px 0;
-    border: 1px solid #E1E2E2;
-    color: #000;
-    background: #FFF;
-    float: left;
-    outline: none;
-    font-size: 0.89em;
-}
-.text1 textarea {
-	width:97.6%;
+.text1 input[type="text"], .text1 textarea {
+	width:92%;
 	margin: 10px 0;
 	border: 1px solid #E1E2E2;
 	color: #000;
@@ -1602,6 +1585,17 @@ li.last-comment{
 	padding: 10px 10px;
 	font-size: 0.89em;
 }
+.text1 input[type="url"]{
+	width:92%;
+	margin: 10px 0;
+	border: 1px solid #E1E2E2;
+	color: #000;
+	font-family: "Century Gothic",Arial, Helvetica, sans-serif;
+	outline: none;
+	margin-bottom: 10px;
+	padding: 10px 10px;
+	font-size: 0.89em;
+}
 .submit {
 	color: #FFF;
 	font-size: 1.1em;
@@ -1609,7 +1603,7 @@ li.last-comment{
 	padding: 10px 20px;
 	border-bottom:2px solid #ffea00;
 	background: #000;
-	float:right;
+	/*float:right;*/
 	display: inline-block;
 	-webkit-transition: all 0.3s ease-out;
 	-moz-transition: all 0.3s ease-out;
@@ -1650,6 +1644,9 @@ h5.leave{
 @media only screen and (max-width: 1024px) {
 	.wrap{
 		width:95%;
+	}
+	.to input[type="text"], .to input[type="email"]{
+		width: 45.6%;
 	}	
 }
 /*  GO FULL WIDTH AT LESS THAN 640 PIXELS */
@@ -2050,7 +2047,7 @@ span.yellow1 a {
 		width: 100%;
 	}
 	.search_box form input[type="text"] {
-		width: 88%;
+		width: 79.33%;
 	}
 	.project-list li img, .project-list1 li img {
 		margin-right: 10px;
@@ -2058,8 +2055,8 @@ span.yellow1 a {
 	/*.to input[type="text"] {
 		width:46.9%;
 	}*/
-	.text1 input[type="text"], .text1 textarea {
-		width: 97.2%;
+	.text1 input[type="url"], .text1 textarea {
+		width: 93.5%;
 	}
 	.data {
 		width: 92.5%;
@@ -2110,7 +2107,7 @@ span.yellow1 a {
 		width: 56.5%;
 	}
 	.search_box form input[type="text"] {
-		width: 78.33%;
+		width: 74%;
 	}
 	.project-list li img, .project-list1 li img {
 		margin-right:5px;
@@ -2118,8 +2115,8 @@ span.yellow1 a {
 	/*.to input[type="text"] {
 		width:46.7%;
 	}*/
-	.text1 input[type="text"], .text1 textarea {
-		width: 97.1%;
+	.text1 input[type="url"], .text1 textarea {
+		width: 93.5%;
 	}
 	.data {
 		width: 92.5%;
@@ -2179,7 +2176,7 @@ span.yellow1 a {
 		width:48.5%;
 	}
 	.search_box form input[type="text"] {
-		width: 84%;
+		width: 68%;
 	}
 	.project-list li img, .project-list1 li img {
 		margin-right: 10px;
@@ -2187,7 +2184,7 @@ span.yellow1 a {
 	/*.to input[type="text"] {
 		width:45.7%;
 	}*/
-	.text1 input[type="text"], .text1 textarea {
+	.text1 input[type="url"], .text1 textarea {
 		width: 96.1%;
 	}
 	.data {
@@ -2345,15 +2342,16 @@ span.yellow1 a {
 		width:30.5%;
 	}
 	.search_box form input[type="text"] {
-		width:63.33%;
+		width:60%;
 	}
 	.project-list li img, .project-list1 li img {
 		margin-right: 10px;
 	}
-	.to input[type="text"], .to input[type="email"], .to input[type="url"], .to textarea {
-		width:44.7%;
+	.to input[type="text"], .to input[type="email"]{
+		width:95.1%;
+		margin-left: 0 !important;
 	}
-	.text1 input[type="text"], .text1 textarea {
+	.text1 input[type="url"], .text1 textarea {
 		width:95.1%;
 	}
 	.data {
@@ -2561,15 +2559,16 @@ span.yellow1 a {
 		width:26.5%;
 	}
 	.search_box form input[type="text"] {
-		width:77%;
+		width:63.33%;
 	}
 	.project-list li img, .project-list1 li img {
 		margin-right: 10px;
 	}
-	.to input[type="text"], .to input[type="email"], .to input[type="url"], .to textarea {
-		width:43.7%;
+	.to input[type="text"], .to input[type="email"]{
+		width:93.1%;
+		margin-left: 0 !important;
 	}
-	.text1 input[type="text"], .text1 textarea {
+	.text1 input[type="url"], .text1 textarea {
 		width:93.1%;
 	}
 	.data {
@@ -2822,15 +2821,16 @@ span.yellow1 a {
 		width:48.5%;
 	}
 	.search_box form input[type="text"] {
-		width:89.33%;
+		width:88%;
 	}
 	.project-list li img, .project-list1 li img {
 		margin-right:10px;
 	}
-	.to input[type="text"], .to input[type="email"], .to input[type="url"], .to textarea {
-		width:43.7%;
+	.to input[type="text"], .to input[type="email"]{
+		width:93.1%;
+		margin-left: 0 !important;
 	}
-	.text1 input[type="text"], .text1 textarea {
+	.text1 input[type="url"], .text1 textarea {
 		width:93.1%;
 	}
 	.data {
@@ -3129,15 +3129,16 @@ span.yellow1 a {
 		width:48.5%;
 	}
 	.search_box form input[type="text"] {
-		width:90%; 
+		width:83.33%;
 	}
 	.project-list li img, .project-list1 li img {
 		margin-right:10px;
 	}
-	.to input[type="text"], .to input[type="email"], .to input[type="url"], .to textarea {
-		width:42.7%;
+	.to input[type="text"], .to input[type="email"]{
+		width:92.7%;
+		margin-left: 0 !important;
 	}
-	.text1 input[type="text"], .text1 textarea {
+	.text1 input[type="url"], .text1 textarea {
 		width:92.7%;
 	}
 	.data {
@@ -3449,15 +3450,16 @@ span.yellow1 a {
 		width:48.5%;
 	}
 	.search_box form input[type="text"] {
-		width:87%;
+		width:78.33%;
 	}
 	.project-list li img, .project-list1 li img {
 		margin-right:10px;
 	}
-	.to input[type="text"], .to input[type="email"], .to input[type="url"], .to textarea {
-		width:39.7%;
+	.to input[type="text"], .to input[type="email"]{
+		width:90.7%;
+		margin-left: 0 !important;
 	}
-	.text1 input[type="text"], .text1 textarea {
+	.text1 input[type="url"], .text1 textarea {
 		width:90.7%;
 	}
 	.data {
@@ -3795,8 +3797,6 @@ span.yellow1 a {
 	}
 }
 
-.alert .close{
-	display: none;
-}
+
 
 

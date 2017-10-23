@@ -41,8 +41,6 @@
 				    </div>
 					<div class="clear"></div>
 				</div>
-			<cfelse>
-				<ul class="list"></ul>
 			</cfif>
 			<cfif !args.print>
 				<div class="blog-comment">
@@ -62,6 +60,7 @@
 		      	<h5 class="leave">Leave a Comment</h5><div class="clear"></div>
 					#cb.quickCommentForm( prc.entry )#			
 			</cfif>	
+			#cb.event("cbui_postEntryDisplay")#
         </div>
         <cfif args.sidebar>
 			<div class="project-sidebar">
