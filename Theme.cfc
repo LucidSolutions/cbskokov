@@ -67,7 +67,7 @@ component{
 	// Layout Variables
      this.name       	= "Skokov";
 	this.description 	= "Content box theme Skokov";
-	this.version		= "1.0.0";
+	this.version		= "1.1.0";
 	this.author 		= "Lucid Outsourcing Solutions Pvt. Ltd.";
 	this.authorURL		= "https://lucidsolutions.in/";
 	// Screenshot URL, can be absolute or locally in your layout package.
