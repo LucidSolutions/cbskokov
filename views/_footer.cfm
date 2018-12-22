@@ -1,3 +1,8 @@
+<style type="text/css" scope>
+.footer-nav .nav>li>a:focus, .nav>li>a:hover{
+	background-color: inherit;
+}
+</style>
 <cfoutput>
 <div class="footer float_left">
 	<div class="footer-top">
@@ -77,8 +82,9 @@
 				<cfloop array="#menuData#" index="menuItem">
 					<cfif structKeyExists( menuItem, "subPageMenu" )>
 						<li class="dropdown">
-							<a href="#menuItem.link#" class="dropdown-toggle" data-toggle="dropdown">#menuItem.title# <b class="caret"></b></a>
-							#buildSubMenu( menuData=menuItem.subPageMenu, parentLink=menuItem.link, parentTitle=menuItem.title )#
+							<!--- <a href="#menuItem.link#" class="dropdown-toggle" data-toggle="dropdown">#menuItem.title# <b class="caret"></b></a> --->
+							<a href="#menuItem.link#">#menuItem.title#</a>
+							<!--- #buildSubMenu( menuData=menuItem.subPageMenu, parentLink=menuItem.link, parentTitle=menuItem.title )# --->
 						</li>
 					<cfelse>
 						<cfif cb.isPageView() AND event.buildLink( cb.getCurrentPage().getSlug() ) eq menuItem.link>
@@ -103,3 +109,14 @@
     </div>
 </div>
 </cfoutput>
+<script type="text/javascript">
+$(document).ready(function() {
+	var testArea = $('.text1').find('textarea');
+	testArea.on("focus",function(){
+		setTimeout(function(){
+			$('.text1').removeAttr('style');
+			$('.text1').css('width','auto');
+		},10);
+	});
+});
+</script>

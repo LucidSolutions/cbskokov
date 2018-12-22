@@ -34,3 +34,26 @@
 </body>
 </html>
 </cfoutput>
+<script type="text/javascript">
+$(document).ready(function() {
+	// $('.dc_pagination').find('.row').css('margin-bottom','10px');
+	$('.dc_pagination').find('.col-xs-12').addClass('col-md-6');
+});
+
+</script>
+<style>
+.pagination{
+	margin:0px;
+	width: 100%
+}
+ul.dc_pagination li:first-child{
+	margin-right: 2% !important;
+}
+ul.dc_pagination li:last-child{
+	margin-left: 3% !important;	
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+	background-color: #ffea00;
+	border-color: #ffea00;
+}
+</style>
