@@ -71,8 +71,8 @@
  	<div class="wrap">
 	 	<div class="copy">
 		    <p class="copy">
-		    	<p>Copyright &copy; #cb.siteName()#.  All rights reserved.</p>
-				<p>Powered by ContentBox v#cb.getContentBoxVersion()#</p>
+		    	<h6>Theme Developed By </h6>
+				<p><a href="https://lucidoutsourcing.com/">Lucid Outsourcing Solutions Pvt. Ltd.</a></p>
 		  	</p>
 	    </div>
 	 	<div class="footer-nav">
@@ -98,7 +98,7 @@
 				</cfloop>
 
 				<!--- Blog Link, verify active --->
-				<cfif ( !prc.cbSettings.cb_site_disable_blog )>
+				<cfif ( !structKeyExists(prc.cbSettings, "cb_site_disable_blog") )>
 					<cfif cb.isBlogView()><li class="active"><cfelse><li></cfif>
 						<a href="#cb.linkBlog()#">Blog</a>
 					</li>

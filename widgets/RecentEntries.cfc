@@ -44,16 +44,29 @@ component extends="contentbox.models.ui.BaseWidget" singleton{
 		var cbSettings 		= event.getValue( name="cbSettings", private=true );
 		
 		// Determine Sort Order
-		switch( arguments.sortOrder ){
-			case "Most Popular" 	: { arguments.sortOrder = "hits DESC";break; }
-			case "Most Commented" 	: { arguments.sortOrder = "numberOfComments DESC";break;}
-			default : { arguments.sortOrder = "publishedDate DESC"; }
+		// Determine Sort Order
+		switch ( arguments.sortOrder ) {
+			case "Most Popular": {
+				arguments.sortOrder = "hits DESC";
+				break;
+			}
+			case "Most Commented": {
+				arguments.sortOrder = "numberOfComments DESC";
+				break;
+			}
+			default: {
+				arguments.sortOrder = "publishedDate DESC";
+			}
 		}
 
-		var entryResults 	= entryService.findPublishedEntries( max=arguments.max,
-											   					 category=arguments.category,
-											   				 	 searchTerm=arguments.searchTerm,
-											   				 	 sortOrder=arguments.sortOrder );
+		var entryResults = variables.entryService.findPublishedContent(
+			max       : arguments.max,
+			category  : arguments.category,
+			searchTerm: arguments.searchTerm,
+			sortOrder : arguments.sortOrder,
+			siteID    : getSite().getsiteID()
+		);
+
 		var rString			= "";
 
 		// iteration cap
@@ -70,7 +83,7 @@ component extends="contentbox.models.ui.BaseWidget" singleton{
 			writeOutput('<ul>');
 			// iterate and create
 			for(var x=1; x lte arguments.max; x++){
-				writeOutput('<li><img src="#cb.themeRoot()#/includes/images/arrow.png" alt=""><p><a href="#cb.linkEntry(entryResults.entries[ x ])#">#entryResults.entries[ x ].getTitle()#</a></p><div class="clear"></div></li>');
+				writeOutput('<li><img src="#cb.themeRoot()#/includes/images/arrow.png" alt=""><p><a href="#cb.linkEntry(entryResults.content[ x ])#">#entryResults.content[ x ].getTitle()#</a></p><div class="clear"></div></li>');
 			}
 			// close ul
 			writeOutput( "</ul>" );
@@ -83,7 +96,7 @@ component extends="contentbox.models.ui.BaseWidget" singleton{
 	* Get all the categories
 	*/
 	array function getAllCategories() cbIgnore{
-		return categoryService.getAllNames();
+		return variables.categoryService.getAllNames();
 	}
 
 }

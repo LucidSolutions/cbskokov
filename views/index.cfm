@@ -15,14 +15,14 @@
 					<!--- Are we filtering by category? --->
 					<cfif len( rc.category )>
 						<p class="infoBar">
-							<span class="display-inline-block">Category Filtering: '#rc.category#'</span>
+							<span class="display-inline-block">Category Filtering: '#encodeForHTML( rc.category )#'</span>
 							<span class="display-inline-block"><a href="#cb.linkBlog()#" class="submit" title="Remove filter and view all entries">Remove Filter</a></span>
 						</p>
 					</cfif>
 					<!--- Are we searching --->
 					<cfif len( rc.q )>
 						<p>
-							<span class="display-inline-block">Searching by: '#rc.q#'</span>
+							<span class="display-inline-block">Searching by: '#encodeForHTML( rc.q )#'</span>
 							<span class="display-inline-block"><a class="submit" href="#cb.linkBlog()#" title="Clear search and view all entries">Clear Search</a></span>
 						</p>
 					</cfif>

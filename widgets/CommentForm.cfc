@@ -39,7 +39,7 @@ component extends="contentbox.models.ui.BaseWidget" singleton{
 
 				#cb.event( "cbui_preCommentForm" )#
 
-				#getModel( "messagebox@cbMessagebox" ).renderIt()#
+				#getInstance( "messagebox@cbMessagebox" ).renderIt()#
 
 				#html.hiddenField( name="contentID", value=arguments.content.getContentID() )#
 				#html.hiddenField( name="contentType", value=arguments.content.getContentType() )#');
@@ -50,9 +50,9 @@ component extends="contentbox.models.ui.BaseWidget" singleton{
 			// writeOutput('<input type="email" name = "authorEmail" placeholder="Email (required)" class="text" value="#event.getValue("authorEmail", oCurrentAuthor.getEmail())#"  style="margin-left: 10px">');
 			// writeOutput('</div>');
 			writeOutput('<div class="to">');
-			writeOutput('<input type="text" name = "author" placeholder="Name (required)" class="text" value="#event.getValue("author",trim(oCurrentAuthor.getName()))#" required="required">');
+			writeOutput('<input type="text" name = "author" placeholder="Name (required)" class="text" value="#event.getValue("author",trim(oCurrentAuthor.getFirstName()))#" required="required">');
 			writeOutput('<input type="email" name = "authorEmail" placeholder="Email (required)" class="text" value="#event.getValue("authorEmail", oCurrentAuthor.getEmail())#" required="required" style="margin-left: 10px">');
-			writeOutput('<div class="text1"><input type="url" name="authorURL" required="required" placeholder="Website (required)" class="text" value="#event.getValue("author",trim(oCurrentAuthor.getName()))#" required="required">');
+			writeOutput('<div class="text1"><input type="url" name="authorURL" required="required" placeholder="Website (required)" class="text" value="#event.getValue("author",trim(oCurrentAuthor.getFirstName()))#" required="required">');
 			writeOutput('<textarea name="content" required="required" value="event.getValue( "content", "" ) required="required" placeholder="Comment (required)""></textarea>');
 			writeOutput('</div></div>');
 			// writeOutput('<div class="checkbox"><label><input type="checkbox" name="subscribe"> Notify me of follow-up comments by email.</label></div>');
